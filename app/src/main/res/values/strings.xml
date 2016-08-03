@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JonahWorld</string>
+    <string name="app_title">JonahWorld</string>
+
+    <string name="username_error">手机号码错误</string>
+    <string name="password_error">密码请控制在6-12位以内非中文</string>
+</resources>
