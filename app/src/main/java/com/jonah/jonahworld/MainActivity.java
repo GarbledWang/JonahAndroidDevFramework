@@ -1,14 +1,12 @@
 package com.jonah.jonahworld;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import com.jonah.jonahworld.base.AppActivity;
+import com.jonah.jonahworld.base.BaseFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+    protected BaseFragment getFragmentView() {
+        return null;
     }
 }

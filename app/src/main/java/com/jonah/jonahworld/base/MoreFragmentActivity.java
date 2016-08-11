@@ -1,7 +1,6 @@
 package com.jonah.jonahworld.base;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.KeyEvent;
 
 /**
@@ -11,11 +10,13 @@ import android.view.KeyEvent;
 public abstract class MoreFragmentActivity extends BaseActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         if (getSupportFragmentManager().getFragments() == null) {
             BaseFragment baseFragment = getFragmentView();
-            setupFragment(baseFragment);
+            if (getFragmentView() != null) {
+                setupFragment(baseFragment);
+            }
         }
     }
 

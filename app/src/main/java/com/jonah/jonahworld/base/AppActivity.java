@@ -14,7 +14,7 @@ public abstract class AppActivity extends MoreFragmentActivity {
     protected TextView tvTitle;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         tvTitle = (TextView) findViewById(R.id.tv_title);
         tvTitle.setText(getResources().getString(R.string.app_title));
