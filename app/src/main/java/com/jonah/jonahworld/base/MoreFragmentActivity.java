@@ -40,6 +40,8 @@ public abstract class MoreFragmentActivity extends BaseActivity {
             if (getSupportFragmentManager().getBackStackEntryCount() == 1){
                 finish();
                 return true;
+            }else {
+                getSupportFragmentManager().popBackStack();
             }
         }
         return super.onKeyDown(keyCode, event);
