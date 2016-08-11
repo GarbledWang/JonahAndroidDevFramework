@@ -37,11 +37,12 @@ public abstract class MoreFragmentActivity extends BaseActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK){
-            if (getSupportFragmentManager().getBackStackEntryCount() == 1){
+            if (getSupportFragmentManager().getBackStackEntryCount() > 1){
                 finish();
                 return true;
             }else {
                 getSupportFragmentManager().popBackStack();
+                return true;
             }
         }
         return super.onKeyDown(keyCode, event);
