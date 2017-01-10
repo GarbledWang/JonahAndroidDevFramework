@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion Integer.parseInt(projectCompileSdkVersion)
+    buildToolsVersion projectBuildToolsVersion
 
     defaultConfig {
         applicationId "com.jonah.jonahworld"
-        minSdkVersion 15
-        targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion Integer.parseInt(projectMinSdkVersion)
+        targetSdkVersion Integer.parseInt(projectTargetSdkVersion)
+        versionCode Integer.parseInt(moduleVersionCode)
+        versionName moduleVersionName
         multiDexEnabled true
     }
     buildTypes {

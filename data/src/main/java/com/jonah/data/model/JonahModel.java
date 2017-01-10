@@ -7,9 +7,8 @@ import com.jonah.data.service.JonahService;
 
 /**
  * @author JonahWang
- *         Created by JonahWang on 2016/7/11.
+ * Created by JonahWang on 2016/7/11.
  */
 public class JonahModel {
     public static JonahService service = JonahFactory.createService(JonahService.class, EndPoint.JONAH_URL);
-
 }
